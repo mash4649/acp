@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Copies the curated public bundle from release/public_bundle/ to a destination directory.
-# The canonical, versioned tree lives under release/public_bundle/ (not project/public/).
+# Copies the curated public bundle from release/distribution_bundle/ to a destination directory.
+# The canonical, versioned tree lives under release/distribution_bundle/ (not project/public_assets/).
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-CANONICAL="$ROOT_DIR/release/public_bundle"
+CANONICAL="$ROOT_DIR/release/distribution_bundle"
 DEST="${1:-$ROOT_DIR/dist/public_bundle}"
 
 if [[ ! -d "$CANONICAL" ]]; then

@@ -10,8 +10,8 @@
 - `examples/`（サンプル）
 - `scripts/`（検証/ビルド/配布スクリプト）
 - `sdk/`（SDK 実装ソース）
-- `public/`（公開向け資料）
-- `release/public_bundle/`（公開用バンドル定義）
+- `public_assets/`（公開向け資料）
+- `release/distribution_bundle/`（公開用バンドル定義）
 - ルートの運用ファイル（`README.md`, `LICENSE`, `CONTRIBUTING.md` など）
 
 ## 配布しないもの（`.gitignore` 対象）

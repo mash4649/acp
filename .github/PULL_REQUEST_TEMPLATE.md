@@ -16,7 +16,7 @@ Describe the change and why it is needed.
 - [ ] `./scripts/public_release_check.sh`
 - [ ] `bash scripts/conformance.sh run --mock`
 - [ ] `bash scripts/conformance.sh run --reference`
-- [ ] `bash release/public_bundle/scripts/security_ops_minimum.sh all` when applicable
+- [ ] `bash release/distribution_bundle/scripts/security_ops_minimum.sh all` when applicable
 
 ## Notes
 

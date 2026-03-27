@@ -1,4 +1,0 @@
-doctor: ok
-lock-fingerprint: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/security/requirements-conformance.sha256
-sbom-min: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/security/sbom-min.json
-vuln-scan: no known vulnerabilities (pip-audit)

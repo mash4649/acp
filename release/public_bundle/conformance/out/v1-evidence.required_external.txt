@@ -1,9 +1,0 @@
-doctor: ok
-doctor: ok
-prepare: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/run-request.phase1.json
-run: external report written to /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/release-gate/report.required-external.json
-conformance-ci: ok (mode=required-external report=/Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/release-gate/report.required-external.json)
-external-release-gate: ok
-report: /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/release-gate/report.required-external.json
-summary: /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/release-gate/summary.required-external.json
-env: /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/release-gate/env.required-external.txt

@@ -20,7 +20,7 @@ ACP is a public specification and conformance repo. Keep changes small, testable
 - `./scripts/public_release_check.sh`
 - `bash scripts/conformance.sh run --mock`
 - `bash scripts/conformance.sh run --reference`
-- `bash release/public_bundle/scripts/security_ops_minimum.sh all` when security-related files change
+- `bash release/distribution_bundle/scripts/security_ops_minimum.sh all` when security-related files change
 
 ## Pull Requests
 

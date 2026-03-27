@@ -17,9 +17,10 @@
 - [価値 KPI](./31_価値KPI.md)
 - [10分価値体験](./10分価値体験.md)
 - [主要ハーネス統合レシピ](./主要ハーネス統合レシピ.md)
+- [ACP Lite](./acp_lite.md)
 - [導入事例集](./導入事例集.md)
 - [ACP を既存システムに1日で組み込む](./ACPを既存システムに1日で組み込む.md)
 - [ADR ディレクトリ](../adr/README.md)
 
 ## 関連資料
-- [公開ドキュメント索引](../../release/public_bundle/docs/README.md)
+- [公開ドキュメント索引](../../release/distribution_bundle/docs/README.md)

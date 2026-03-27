@@ -1,0 +1,8 @@
+{
+  "mode": "required-external",
+  "profile": "conformance/profiles/phase3.profile.json",
+  "runner": "/Users/mbp/Public/dev/mash4649/ACP/project/release/distribution_bundle/scripts/acp_harness_runner.sh",
+  "report_status": "pass",
+  "summary_failed": 0,
+  "generated_at": "2026-03-25T12:15:41Z"
+}

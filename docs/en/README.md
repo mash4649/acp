@@ -17,9 +17,10 @@
 - [Value KPIs](./value_kpis.md)
 - [10-minute value experience](./value_experience_10min.md)
 - [Harness integration recipes](./harness_integration_recipes.md)
+- [ACP Lite](./acp_lite.md)
 - [Case studies](./case_studies.md)
 - [ACP in one day](./tutorial_one_day.md)
 - [ADR directory](../adr/README.md)
 
 ## Related public bundle docs
-- [Public documentation index](../../release/public_bundle/docs/README.md)
+- [Public documentation index](../../release/distribution_bundle/docs/README.md)

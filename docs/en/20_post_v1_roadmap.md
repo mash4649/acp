@@ -270,3 +270,41 @@ Track periodically to visualize project progress.
 3. **J-1** — publish industry-specific templates
 
 With these, the project can move from architecture completion toward ecosystem tooling and adoption templates.
+
+---
+
+## Business Evaluation Addendum
+
+The recent business review exposed a different class of gap: not technical completeness, but commercial clarity.
+
+### Issues surfaced
+
+| Issue | Why it matters | Next response |
+|------|----------------|---------------|
+| Target segment is still broad | Broad positioning makes adoption messaging generic | Narrow the first buyer persona and use case |
+| ROI story is not compressed enough | Executives need a short numeric reason to care | Add a one-line business pitch with quantified outcomes |
+| Comparison against existing tools is missing | Buyers need a clear reason to switch or add ACP | Add a comparison matrix against adjacent tools |
+| Small-team onboarding path is implicit | Smaller teams need a lighter entry point | Define an ACP Lite path with minimal ceremony |
+| OSS story is weaker than the enterprise story | Community growth needs a simpler first win | Separate a lightweight adoption path from the enterprise path |
+
+### Next roadmap
+
+| Step | What changes | Output |
+|------|--------------|--------|
+| 1 | Narrow the first target segment | A focused buyer persona and use case |
+| 2 | Add buyer-facing comparison material | A concise matrix against existing tools |
+| 3 | Add an executive-ready value statement | A short pitch with measurable outcomes |
+| 4 | Define ACP Lite for small teams | A minimal edition with one-command adoption |
+| 5 | Validate the adoption path | Pilot checklist and pricing hypothesis |
+
+### ACP Lite for small teams
+
+ACP Lite should keep the accountability boundary, but remove enterprise overhead.
+
+- one command to run
+- one report to inspect
+- one minimal task bundle
+- minimal setup and documentation
+- no governance package required on day 1
+
+The intent is to make ACP useful for a single project team, a small internal tool, or a solo maintainer who still needs evidence and accountability.

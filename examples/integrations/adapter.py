@@ -34,7 +34,7 @@ class HarnessConfig:
 
 
 def default_runner_path(repo_root: Path) -> Path:
-    return (repo_root / "release/public_bundle/scripts/acp_harness_runner.sh").resolve()
+    return (repo_root / "release/distribution_bundle/scripts/acp_harness_runner.sh").resolve()
 
 
 def run_harness(config: HarnessConfig) -> dict[str, Any]:

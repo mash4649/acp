@@ -60,5 +60,5 @@ Expected output:
 If the reference run fails with import errors for `jsonschema` or `yaml`, remove `.tmp/conformance-deps` and reinstall the dependencies. That usually means the wheel set was interrupted or installed with an incompatible Python version.
 
 ## What to read next
-- [Roadmap](../../release/public_bundle/docs/en/20_post_v1_roadmap.md)
-- [Public docs index](../../release/public_bundle/docs/README.md)
+- [Roadmap](../../release/distribution_bundle/docs/en/20_post_v1_roadmap.md)
+- [Public docs index](../../release/distribution_bundle/docs/README.md)

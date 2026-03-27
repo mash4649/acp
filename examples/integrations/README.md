@@ -30,7 +30,7 @@ Then POST to `/runs/example` or call the service with your own request payload.
 
 - Contract: `conformance/harness_contract_v1.json`
 - Profile: `conformance/profiles/phase1.profile.json`
-- Runner: `release/public_bundle/scripts/acp_harness_runner.sh`
+- Runner: `release/distribution_bundle/scripts/acp_harness_runner.sh`
 
 ## Notes
 
