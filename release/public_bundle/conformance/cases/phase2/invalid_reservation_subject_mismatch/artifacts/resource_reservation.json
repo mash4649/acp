@@ -1,0 +1,14 @@
+{
+  "artifact_type": "resource_reservation_v1",
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0",
+  "agreement_id": "agr-phase2-child",
+  "revision_id": "rev-phase2-child",
+  "reservation_id": "res-phase2-subject-mismatch",
+  "parent_subject_ref": "subject:wrong-parent",
+  "child_subject_ref": "subject:provider-child",
+  "reserved_amount": 1000,
+  "currency": "USD",
+  "expires_at": "2026-03-19T03:30:00Z",
+  "created_at": "2026-03-19T02:05:00Z"
+}

@@ -1,0 +1,7 @@
+{
+  "binding_type": "signature_envelope_binding_v1",
+  "binding_version": "1.0.0",
+  "envelope_type": "signed-envelope",
+  "key_reference_mode": "registry-ref",
+  "created_at": "2026-03-19T05:05:00Z"
+}

@@ -1,0 +1,40 @@
+{
+  "run_id": "phase1-20260319T011500Z",
+  "profile_id": "phase1-accountability-minimum",
+  "status": "pass",
+  "generated_at": "2026-03-19T01:15:00Z",
+  "summary": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "notes": [
+      "example payload"
+    ]
+  },
+  "results": [
+    {
+      "check_type": "schema",
+      "target_id": "schemas/vectors/valid/agreement_valid.json",
+      "vector_path": "schemas/vectors/valid/agreement_valid.json",
+      "schema_path": "schemas/core/agreement_v1.schema.json",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "schemas/vectors/valid/agreement_valid.json"
+      ]
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "valid_child_activation_complete:delegation_graph_acyclic",
+      "case_id": "valid_child_activation_complete",
+      "invariant_id": "delegation_graph_acyclic",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase2/valid_child_activation_complete/artifacts/delegation_edge.json"
+      ]
+    }
+  ]
+}

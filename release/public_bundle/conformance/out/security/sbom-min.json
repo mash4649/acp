@@ -1,0 +1,24 @@
+{
+  "sbom_type": "acp-minimum-sbom-v1",
+  "generated_at_utc": "2026-03-25T12:15:41.872482+00:00",
+  "source": "requirements-conformance.txt",
+  "tool": "scripts/security_ops_minimum.sh",
+  "environment": {
+    "python_version": "3.13.12",
+    "platform": "macOS-15.7.4-arm64-arm-64bit-Mach-O"
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "jsonschema",
+      "version": "4.23.0",
+      "purl": "pkg:pypi/jsonschema@4.23.0"
+    },
+    {
+      "type": "library",
+      "name": "PyYAML",
+      "version": "6.0.2",
+      "purl": "pkg:pypi/PyYAML@6.0.2"
+    }
+  ]
+}

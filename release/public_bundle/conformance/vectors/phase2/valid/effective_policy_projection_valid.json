@@ -1,0 +1,18 @@
+{
+  "artifact_type": "effective_policy_projection_v1",
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0",
+  "agreement_id": "agr-phase2-child",
+  "revision_id": "rev-phase2-child",
+  "projection_id": "projection-phase2-001",
+  "binding_id": "binding-phase2-001",
+  "permissions": [
+    "delegate:execute"
+  ],
+  "prohibitions": [],
+  "duties": [
+    "log:evidence"
+  ],
+  "time_fact_ref": "tf-phase2-001",
+  "created_at": "2026-03-19T02:07:00Z"
+}

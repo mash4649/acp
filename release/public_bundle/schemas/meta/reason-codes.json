@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "registry_id": "urn:acp:meta:reason-codes:1.0.0",
+  "frozen": true,
+  "reason_codes": [
+    "INTEGRITY_OK",
+    "INTEGRITY_FAIL",
+    "EVIDENCE_INSUFFICIENT",
+    "ACCEPT",
+    "PARTIAL_ACCEPT",
+    "REJECT",
+    "INCONCLUSIVE",
+    "DISPUTE_OPENED",
+    "FREEZE_COMMITTED",
+    "SETTLEMENT_RELEASE",
+    "SETTLEMENT_PARTIAL_RELEASE",
+    "SETTLEMENT_HOLD",
+    "SETTLEMENT_BLOCK",
+    "SETTLEMENT_REFUND"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "artifact_type": "verifier_descriptor_v1",
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0",
+  "verifier_id": "verifier-phase3-missing-proof",
+  "verification_method": "zk-proof",
+  "trust_root_ref": "trust-root-phase3-missing-proof",
+  "created_at": "2026-03-19T05:01:00Z"
+}

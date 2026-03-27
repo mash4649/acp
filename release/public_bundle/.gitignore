@@ -1,0 +1,6 @@
+.DS_Store
+.tmp/
+
+# Ephemeral conformance runner outputs (v1 evidence paths are tracked explicitly below)
+conformance/out/run-request.phase1.json
+conformance/out/report.phase1.json

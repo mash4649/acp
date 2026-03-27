@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:acp:schemas:companion:signature_envelope_binding_v1",
+  "title": "signature_envelope_binding_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "binding_type",
+    "binding_version",
+    "envelope_type",
+    "key_reference_mode",
+    "created_at"
+  ],
+  "properties": {
+    "binding_type": {
+      "const": "signature_envelope_binding_v1"
+    },
+    "binding_version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "envelope_type": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+    "key_reference_mode": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date-time"
+    }
+  }
+}

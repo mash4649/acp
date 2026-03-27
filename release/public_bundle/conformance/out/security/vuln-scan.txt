@@ -1,0 +1,4 @@
+WARNING:pip_audit._cli:--no-deps is supported, but users are encouraged to fully hash their pinned dependencies
+WARNING:pip_audit._cli:Consider using a tool like `pip-compile`: https://pip-tools.readthedocs.io/en/latest/#using-hashes
+WARNING:pip_audit._cache:Failed to write to cache directory, performance may be degraded: [Errno 1] Operation not permitted: '/Users/mbp/Library/Caches/pip-audit/0/b/9/1/7/tmpm1_4n3s0'
+No known vulnerabilities found

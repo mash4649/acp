@@ -1,0 +1,20 @@
+{
+  "case_id": "invalid_projection_missing_time_fact",
+  "expected_status": "fail",
+  "expected_results": [
+    {
+      "invariant_id": "delegation_graph_acyclic",
+      "expected": "pass"
+    },
+    {
+      "invariant_id": "policy_projection_inputs_replayable",
+      "expected": "fail",
+      "message_contains": "missing time fact"
+    },
+    {
+      "invariant_id": "time_guards_reference_explicit_time_facts",
+      "expected": "fail",
+      "message_contains": "missing time fact"
+    }
+  ]
+}

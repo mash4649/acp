@@ -1,0 +1,39 @@
+Status: Draft
+Type: Informative
+Source of truth: /Users/mbp/Public/dev/mash4649/ACP/出力/ACP v1.0 最終稿.txt
+Last aligned with: ACP v1.0 Final-Revised Draft
+
+# Anchor Use Case: Delegated Research Memo
+
+## Why this use case
+It demonstrates delegation, evidence, verification, settlement separation, and dispute/freeze in one short flow without misframing ACP as payment or execution protocol.
+
+## Actors
+- Requester
+- Provider collective
+- Child research agent
+- Verifier
+- Settlement adapter
+
+## Artifact flow
+- agreement_v1 / revision_v1
+- delegation_edge_v1 + resource_reservation_v1
+- event_v1 sequence
+- evidence_pack_v1
+- verification_report_v1
+- settlement_intent_v1
+- freeze_record_v1 (when disputed)
+
+## Happy path
+1. Parent revision activates.
+2. Child delegation is opened with reservation coverage.
+3. Evidence pack is submitted.
+4. Verification returns ACCEPT or PARTIAL_ACCEPT.
+5. Settlement intent is emitted separately.
+
+## Dispute path
+1. dispute.opened event.
+2. freeze_record commits state/evidence/event baseline.
+3. Hold or block settlement intent.
+4. Resolution emitted as new events; no mutation of prior artifacts.
+

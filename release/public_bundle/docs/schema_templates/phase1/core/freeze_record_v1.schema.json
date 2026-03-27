@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:acp:schemas:core:freeze_record_v1",
+  "title": "freeze_record_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "schema_version",
+    "protocol_version",
+    "agreement_id",
+    "revision_id",
+    "freeze_id",
+    "state_commitment",
+    "evidence_commitment",
+    "event_commitment",
+    "frozen_at"
+  ],
+  "properties": {
+    "artifact_type": {"const": "freeze_record_v1"},
+    "schema_version": {"type": "string"},
+    "protocol_version": {"type": "string"},
+    "agreement_id": {"type": "string"},
+    "revision_id": {"type": "string"},
+    "freeze_id": {"type": "string"},
+    "state_commitment": {"type": "string"},
+    "evidence_commitment": {"type": "string"},
+    "event_commitment": {"type": "string"},
+    "frozen_at": {"type": "string"}
+  }
+}

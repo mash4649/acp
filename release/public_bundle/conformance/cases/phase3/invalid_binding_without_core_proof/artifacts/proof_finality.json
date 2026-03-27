@@ -1,0 +1,12 @@
+{
+  "artifact_type": "proof_finality_v1",
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0",
+  "agreement_id": "agr-phase3-binding-only",
+  "revision_id": "rev-phase3-binding-only",
+  "finality_id": "finality-phase3-binding-only",
+  "proof_id": "proof-phase3-binding-only",
+  "status": "FINAL",
+  "finalized_at": "2026-03-19T05:02:00Z",
+  "created_at": "2026-03-19T05:02:00Z"
+}

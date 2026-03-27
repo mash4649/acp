@@ -1,0 +1,45 @@
+{
+  "profile_id": "phase2-delegation-policy-safety",
+  "version": "1.0.0",
+  "description": "Phase 2 schema and invariant profile for delegation and replayable policy safety",
+  "vector_manifest": "conformance/manifests/phase2.vector-manifest.json",
+  "vectors": {
+    "valid": [
+      "conformance/vectors/phase2/valid/delegation_edge_valid.json",
+      "conformance/vectors/phase2/valid/resource_reservation_valid.json",
+      "conformance/vectors/phase2/valid/data_policy_binding_valid.json",
+      "conformance/vectors/phase2/valid/effective_policy_projection_valid.json",
+      "conformance/vectors/phase2/valid/time_fact_valid.json"
+    ],
+    "invalid": [
+      "conformance/vectors/phase2/invalid/delegation_edge_missing_child_revision_id.json",
+      "conformance/vectors/phase2/invalid/delegation_edge_wrong_artifact_type.json",
+      "conformance/vectors/phase2/invalid/resource_reservation_missing_reserved_amount.json",
+      "conformance/vectors/phase2/invalid/resource_reservation_reserved_amount_wrong_type.json",
+      "conformance/vectors/phase2/invalid/data_policy_binding_missing_policy_hash.json",
+      "conformance/vectors/phase2/invalid/effective_policy_projection_missing_time_fact_ref.json",
+      "conformance/vectors/phase2/invalid/time_fact_missing_observed_at.json"
+    ]
+  },
+  "schema_map": {
+    "agreement": "schemas/core/agreement_v1.schema.json",
+    "revision": "schemas/core/revision_v1.schema.json",
+    "event": "schemas/core/event_v1.schema.json",
+    "resource_reservation": "schemas/core/resource_reservation_v1.schema.json",
+    "delegation_edge": "schemas/core/delegation_edge_v1.schema.json",
+    "data_policy_binding": "schemas/core/data_policy_binding_v1.schema.json",
+    "effective_policy_projection": "schemas/core/effective_policy_projection_v1.schema.json",
+    "time_fact": "schemas/core/time_fact_v1.schema.json"
+  },
+  "meta_registries": [
+    "schemas/meta/reason-codes.json",
+    "schemas/meta/status-registers.json"
+  ],
+  "cases": [
+    "conformance/cases/phase2/valid_child_activation_complete",
+    "conformance/cases/phase2/invalid_delegation_cycle",
+    "conformance/cases/phase2/invalid_child_activation_without_reservation",
+    "conformance/cases/phase2/invalid_projection_missing_time_fact",
+    "conformance/cases/phase2/invalid_reservation_subject_mismatch"
+  ]
+}

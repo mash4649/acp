@@ -1,0 +1,10 @@
+artifact_type: freeze_record_v1
+schema_version: "1.0.0"
+protocol_version: "1.0"
+agreement_id: agr-parent-001
+revision_id: rev-parent-001
+freeze_id: fr-parent-001
+state_commitment: sha256:state-parent-001
+evidence_commitment: sha256:evidence-parent-001
+event_commitment: sha256:event-parent-001
+frozen_at: "2026-03-19T01:07:00Z"

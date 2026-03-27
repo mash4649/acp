@@ -1,0 +1,6 @@
+{
+  "version": "0.1.0",
+  "lifecycle_status": ["DRAFT", "ACTIVE", "DISPUTE", "CLOSED"],
+  "verification_status": ["PENDING", "ACCEPT", "PARTIAL_ACCEPT", "REJECT", "INCONCLUSIVE"],
+  "settlement_status": ["NONE", "REQUESTED", "RELEASED", "PARTIAL_RELEASED", "HELD", "BLOCKED", "REFUNDED"]
+}

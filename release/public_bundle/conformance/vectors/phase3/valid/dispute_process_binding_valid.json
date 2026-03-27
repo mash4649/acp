@@ -1,0 +1,7 @@
+{
+  "binding_type": "dispute_process_binding_v1",
+  "binding_version": "1.0.0",
+  "process_id": "dispute-process-phase3-001",
+  "challenge_window_ref": "challenge-window-phase3-001",
+  "created_at": "2026-03-19T05:08:00Z"
+}

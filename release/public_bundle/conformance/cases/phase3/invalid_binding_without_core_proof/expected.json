@@ -1,0 +1,20 @@
+{
+  "case_id": "invalid_binding_without_core_proof",
+  "expected_status": "fail",
+  "expected_results": [
+    {
+      "invariant_id": "proof_status_not_collapsed_into_acceptance",
+      "expected": "pass"
+    },
+    {
+      "invariant_id": "proof_finality_references_existing_proof",
+      "expected": "fail",
+      "message_contains": "missing proof"
+    },
+    {
+      "invariant_id": "companion_bindings_do_not_replace_core_semantics",
+      "expected": "fail",
+      "message_contains": "cannot replace missing proof artifacts"
+    }
+  ]
+}

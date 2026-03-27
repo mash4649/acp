@@ -1,0 +1,198 @@
+name: ACP Public Bundle Conformance
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        required: false
+        default: "all"
+        type: choice
+        options:
+          - all
+          - mock
+          - reference
+      profile:
+        description: "Phase profile for mock runs"
+        required: false
+        default: "conformance/profiles/phase1.profile.json"
+        type: choice
+        options:
+          - conformance/profiles/phase1.profile.json
+          - conformance/profiles/phase2.profile.json
+          - conformance/profiles/phase3.profile.json
+
+jobs:
+  public_release_guardrail:
+    needs: conformance_lock_guard
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure required CLI tools
+        run: |
+          set -euo pipefail
+          if ! command -v rg >/dev/null 2>&1 || ! command -v jq >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y jq ripgrep
+          fi
+
+      - name: Public release guardrail
+        run: ./scripts/public_release_check.sh
+
+  conformance_lock_guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify requirements lock
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          def parse_pins(path: Path) -> dict[str, str]:
+              pins: dict[str, str] = {}
+              for lineno, raw in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+                  line = raw.strip()
+                  if not line or line.startswith("#"):
+                      continue
+                  match = re.fullmatch(r"([A-Za-z0-9_.-]+)==([A-Za-z0-9_.!+\-]+)", line)
+                  if match is None:
+                      raise SystemExit(f"{path}:{lineno}: unsupported requirement format: {line}")
+                  pins[match.group(1).lower()] = match.group(2)
+              return pins
+
+          direct = parse_pins(Path("requirements-conformance.txt"))
+          locked = parse_pins(Path("requirements-conformance.lock"))
+          missing = sorted(name for name in direct if name not in locked)
+          drift = sorted(
+              f"{name} ({direct[name]} != {locked[name]})"
+              for name in direct
+              if name in locked and direct[name] != locked[name]
+          )
+          if missing or drift:
+              if missing:
+                  print("Lock missing direct requirements: " + ", ".join(missing), file=sys.stderr)
+              if drift:
+                  print("Lock version drift: " + ", ".join(drift), file=sys.stderr)
+              raise SystemExit(1)
+          print("requirements lock: ok")
+          PY
+
+  cross_version_compat:
+    needs: conformance_lock_guard
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Ensure required CLI tools
+        run: |
+          set -euo pipefail
+          if ! command -v rg >/dev/null 2>&1 || ! command -v jq >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y jq ripgrep
+          fi
+
+      - name: Install conformance dependencies from lock
+        run: python -m pip install -r requirements-conformance.lock
+
+      - name: Run cross-version report compatibility suite
+        run: ./scripts/cross_version_compat.sh
+
+  conformance_mock:
+    if: github.event_name != 'workflow_dispatch' || github.event.inputs.mode != 'reference'
+    needs:
+      - conformance_lock_guard
+      - cross_version_compat
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Ensure required CLI tools
+        run: |
+          set -euo pipefail
+          if ! command -v rg >/dev/null 2>&1 || ! command -v jq >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y jq ripgrep
+          fi
+
+      - name: Install conformance dependencies from lock
+        run: python -m pip install -r requirements-conformance.lock
+
+      - name: Install pip-audit
+        run: python -m pip install pip-audit
+
+      - name: Run pip-audit on lock
+        run: pip-audit -r requirements-conformance.lock --no-deps --disable-pip
+
+      - name: Run mock conformance gate
+        env:
+          ACP_CONFORMANCE_MODE: mock
+          ACP_CONFORMANCE_PROFILE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.profile || 'conformance/profiles/phase1.profile.json' }}
+        run: ./scripts/conformance_ci.sh
+
+  conformance_reference:
+    if: github.event_name != 'workflow_dispatch' || github.event.inputs.mode != 'mock'
+    needs:
+      - conformance_lock_guard
+      - cross_version_compat
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        profile:
+          - conformance/profiles/phase1.profile.json
+          - conformance/profiles/phase2.profile.json
+          - conformance/profiles/phase3.profile.json
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Ensure required CLI tools
+        run: |
+          set -euo pipefail
+          if ! command -v rg >/dev/null 2>&1 || ! command -v jq >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y jq ripgrep
+          fi
+
+      - name: Install conformance dependencies from lock
+        run: python -m pip install -r requirements-conformance.lock
+
+      - name: Install pip-audit
+        run: python -m pip install pip-audit
+
+      - name: Run pip-audit on lock
+        run: pip-audit -r requirements-conformance.lock --no-deps --disable-pip
+
+      - name: Run reference conformance gate
+        env:
+          ACP_CONFORMANCE_MODE: reference
+          ACP_CONFORMANCE_PROFILE: ${{ matrix.profile }}
+        run: ./scripts/conformance_ci.sh

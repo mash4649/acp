@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACP Conformant Implementation Registry</title>
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --ink: #1f2a37;
+      --line: #d2c9b8;
+      --accent: #1a6b5a;
+      --card: #fffdf8;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "IBM Plex Sans", "Noto Sans", sans-serif; color: var(--ink); background: linear-gradient(120deg, #f7f5ef, #ece6d9); }
+    main { max-width: 1100px; margin: 0 auto; padding: 28px 20px 56px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    p { margin: 6px 0; }
+    .meta { color: #4a5565; font-size: 14px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0 20px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+    .card .k { font-size: 12px; color: #5a6575; text-transform: uppercase; letter-spacing: .05em; }
+    .card .v { margin-top: 4px; font-size: 28px; font-weight: 700; color: var(--accent); }
+    .table-wrap { overflow: auto; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; min-width: 940px; }
+    th, td { padding: 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 14px; }
+    th { background: #f0eadc; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>ACP Conformant Implementation Registry</h1>
+    <p class="meta">Machine-readable source: <code>docs/registry/implementations.json</code></p>
+    <p class="meta">Generated at: 2026-03-26T16:00:00Z</p>
+    <div class="cards">
+      <div class="card"><div class="k">Total Entries</div><div class="v">1</div></div>
+      <div class="card"><div class="k">Active Entries</div><div class="v">1</div></div>
+      <div class="card"><div class="k">External Active</div><div class="v">0</div></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Implementation ID</th>
+            <th>Name</th>
+            <th>Maintainer</th>
+            <th>Level</th>
+            <th>Status</th>
+            <th>Self-authored</th>
+            <th>Issued</th>
+            <th>Renewal Due</th>
+            <th>Evidence Report</th>
+            <th>Suite Manifest</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr><td><code>acp-reference-harness-self-001</code></td><td>ACP Reference Harness (Repo-local)</td><td>ACP Maintainers</td><td>L3</td><td>active</td><td>yes</td><td>2026-03-26</td><td>2026-06-24</td><td><a href="../conformance/out/report.phase3.json">report</a></td><td><a href="../.tmp/certification-suite/ACP-certification-suite-level3/manifest.json">suite manifest</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

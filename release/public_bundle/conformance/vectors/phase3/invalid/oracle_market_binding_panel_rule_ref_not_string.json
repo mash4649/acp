@@ -1,0 +1,7 @@
+{
+  "binding_type": "oracle_market_binding_v1",
+  "binding_version": "1.0.0",
+  "market_id": "oracle-market-phase3-struct",
+  "panel_rule_ref": 42,
+  "created_at": "2026-03-26T03:07:00Z"
+}

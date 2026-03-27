@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:acp:schemas:core:verification_report_v1",
+  "title": "verification_report_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "schema_version",
+    "protocol_version",
+    "agreement_id",
+    "revision_id",
+    "verification_id",
+    "integrity_decision",
+    "acceptance_decision",
+    "created_at"
+  ],
+  "properties": {
+    "artifact_type": {"const": "verification_report_v1"},
+    "schema_version": {"type": "string"},
+    "protocol_version": {"type": "string"},
+    "agreement_id": {"type": "string"},
+    "revision_id": {"type": "string"},
+    "verification_id": {"type": "string"},
+    "integrity_decision": {"type": "string"},
+    "acceptance_decision": {"type": "string"},
+    "created_at": {"type": "string"}
+  }
+}

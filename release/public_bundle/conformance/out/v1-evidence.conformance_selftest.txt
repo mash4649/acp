@@ -1,0 +1,45 @@
+[1/7] conformance CI in mock mode
+doctor: ok
+doctor: ok
+prepare: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/run-request.phase1.json
+run: mock report written to /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json
+conformance-ci: ok (mode=mock report=/Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json)
+[2/7] conformance CI in reference mode (phase1)
+doctor: ok
+doctor: ok
+prepare: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/run-request.phase1.json
+run: reference report written to /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json
+conformance-ci: ok (mode=reference report=/Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json)
+[3/7] conformance CI in reference mode (phase2)
+doctor: ok
+doctor: ok
+prepare: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/run-request.phase1.json
+run: reference report written to /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json
+conformance-ci: ok (mode=reference report=/Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json)
+[4/7] conformance CI in reference mode (phase3)
+doctor: ok
+doctor: ok
+prepare: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/run-request.phase1.json
+run: reference report written to /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json
+conformance-ci: ok (mode=reference report=/Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json)
+[5/7] contract smoke with external mode and mock runner
+doctor: ok
+doctor: ok
+prepare: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/run-request.phase1.json
+run: external report written to /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json
+conformance-ci: ok (mode=external report=/Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/report.phase1.json)
+[6/7] negative-path check (required-external must reject mock runner)
+negative-path: expected failure observed
+[7/7] parity suite (reference vs bundled runner, phase3; expect zero diff)
+doctor: ok
+doctor: ok
+prepare: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/run-request.phase1.json
+run: reference report written to /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/parity-selftest/report.reference.phase3.profile.20260325T121533Z.json
+conformance-ci: ok (mode=reference report=/Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/parity-selftest/report.reference.phase3.profile.20260325T121533Z.json)
+doctor: ok
+doctor: ok
+prepare: wrote /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/run-request.phase1.json
+run: external report written to /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/parity-selftest/report.external.phase3.profile.20260325T121533Z.json
+conformance-ci: ok (mode=required-external report=/Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/parity-selftest/report.external.phase3.profile.20260325T121533Z.json)
+conformance_parity: ok -> /Users/mbp/Public/dev/mash4649/ACP/project/release/public_bundle/conformance/out/parity-selftest/parity-report.phase3.profile.json
+selftest: ok

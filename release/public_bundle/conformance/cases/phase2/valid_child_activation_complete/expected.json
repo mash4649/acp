@@ -1,0 +1,22 @@
+{
+  "case_id": "valid_child_activation_complete",
+  "expected_status": "pass",
+  "expected_results": [
+    {
+      "invariant_id": "delegation_graph_acyclic",
+      "expected": "pass"
+    },
+    {
+      "invariant_id": "reservation_coverage_present_for_child_activation",
+      "expected": "pass"
+    },
+    {
+      "invariant_id": "policy_projection_inputs_replayable",
+      "expected": "pass"
+    },
+    {
+      "invariant_id": "time_guards_reference_explicit_time_facts",
+      "expected": "pass"
+    }
+  ]
+}

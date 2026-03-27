@@ -1,0 +1,440 @@
+{
+  "run_id": "reference-phase3-proof-surface-bindings",
+  "profile_id": "phase3-proof-surface-bindings",
+  "status": "pass",
+  "generated_at": "2026-03-25T12:15:41Z",
+  "summary": {
+    "total": 30,
+    "passed": 30,
+    "failed": 0,
+    "notes": [
+      "Reference harness validates schema vectors and case-based invariants.",
+      "Reference harness is a repo-local baseline and not an external authority."
+    ]
+  },
+  "results": [
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/valid/proof_artifact_valid.json",
+      "vector_path": "conformance/vectors/phase3/valid/proof_artifact_valid.json",
+      "schema_path": "schemas/core/proof_artifact_v1.schema.json",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/valid/proof_artifact_valid.json"
+      ]
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/valid/verifier_descriptor_valid.json",
+      "vector_path": "conformance/vectors/phase3/valid/verifier_descriptor_valid.json",
+      "schema_path": "schemas/core/verifier_descriptor_v1.schema.json",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/valid/verifier_descriptor_valid.json"
+      ]
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/valid/proof_finality_valid.json",
+      "vector_path": "conformance/vectors/phase3/valid/proof_finality_valid.json",
+      "schema_path": "schemas/core/proof_finality_v1.schema.json",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/valid/proof_finality_valid.json"
+      ]
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/valid/canonicalization_binding_valid.json",
+      "vector_path": "conformance/vectors/phase3/valid/canonicalization_binding_valid.json",
+      "schema_path": "schemas/companion/canonicalization_binding_v1.schema.json",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/valid/canonicalization_binding_valid.json"
+      ]
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/valid/validator_abi_binding_valid.json",
+      "vector_path": "conformance/vectors/phase3/valid/validator_abi_binding_valid.json",
+      "schema_path": "schemas/companion/validator_abi_binding_v1.schema.json",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/valid/validator_abi_binding_valid.json"
+      ]
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/invalid/proof_artifact_missing_statement_hash.json",
+      "vector_path": "conformance/vectors/phase3/invalid/proof_artifact_missing_statement_hash.json",
+      "schema_path": "schemas/core/proof_artifact_v1.schema.json",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/invalid/proof_artifact_missing_statement_hash.json"
+      ],
+      "message": "'statement_hash' is a required property"
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/invalid/proof_artifact_wrong_artifact_type.json",
+      "vector_path": "conformance/vectors/phase3/invalid/proof_artifact_wrong_artifact_type.json",
+      "schema_path": "schemas/core/verifier_descriptor_v1.schema.json",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/invalid/proof_artifact_wrong_artifact_type.json"
+      ],
+      "message": "Additional properties are not allowed ('agreement_id', 'proof_id', 'proof_payload_hash', 'revision_id', 'statement_hash', 'verifier_ref' were unexpected); 'verifier_id' is a required property; 'verification_method' is a required property"
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/invalid/verifier_descriptor_missing_verification_method.json",
+      "vector_path": "conformance/vectors/phase3/invalid/verifier_descriptor_missing_verification_method.json",
+      "schema_path": "schemas/core/verifier_descriptor_v1.schema.json",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/invalid/verifier_descriptor_missing_verification_method.json"
+      ],
+      "message": "'verification_method' is a required property"
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/invalid/proof_finality_missing_status.json",
+      "vector_path": "conformance/vectors/phase3/invalid/proof_finality_missing_status.json",
+      "schema_path": "schemas/core/proof_finality_v1.schema.json",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/invalid/proof_finality_missing_status.json"
+      ],
+      "message": "'status' is a required property"
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/invalid/canonicalization_binding_missing_algorithm.json",
+      "vector_path": "conformance/vectors/phase3/invalid/canonicalization_binding_missing_algorithm.json",
+      "schema_path": "schemas/companion/canonicalization_binding_v1.schema.json",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/invalid/canonicalization_binding_missing_algorithm.json"
+      ],
+      "message": "'algorithm' is a required property"
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/invalid/canonicalization_binding_unknown_field.json",
+      "vector_path": "conformance/vectors/phase3/invalid/canonicalization_binding_unknown_field.json",
+      "schema_path": "schemas/companion/canonicalization_binding_v1.schema.json",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/invalid/canonicalization_binding_unknown_field.json"
+      ],
+      "message": "Additional properties are not allowed ('unexpected_field' was unexpected)"
+    },
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/invalid/validator_abi_binding_missing_output_schema_ref.json",
+      "vector_path": "conformance/vectors/phase3/invalid/validator_abi_binding_missing_output_schema_ref.json",
+      "schema_path": "schemas/companion/validator_abi_binding_v1.schema.json",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/invalid/validator_abi_binding_missing_output_schema_ref.json"
+      ],
+      "message": "'output_schema_ref' is a required property"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "valid_proof_surface_complete:proof_status_not_collapsed_into_acceptance",
+      "case_id": "valid_proof_surface_complete",
+      "invariant_id": "proof_status_not_collapsed_into_acceptance",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/canonicalization_binding.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/proof_finality.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/validator_abi_binding.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/verifier_descriptor.json"
+      ],
+      "message": "proof finality vocabulary remains separate from acceptance"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "valid_proof_surface_complete:proof_finality_references_existing_proof",
+      "case_id": "valid_proof_surface_complete",
+      "invariant_id": "proof_finality_references_existing_proof",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/canonicalization_binding.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/proof_finality.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/validator_abi_binding.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/verifier_descriptor.json"
+      ],
+      "message": "proof finality references existing proof and verifier descriptor"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "valid_proof_surface_complete:companion_bindings_do_not_replace_core_semantics",
+      "case_id": "valid_proof_surface_complete",
+      "invariant_id": "companion_bindings_do_not_replace_core_semantics",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/canonicalization_binding.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/proof_finality.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/validator_abi_binding.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/verifier_descriptor.json"
+      ],
+      "message": "companion bindings remain separate from core proof semantics"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "valid_proof_surface_complete:case_status_matches_expectation",
+      "case_id": "valid_proof_surface_complete",
+      "invariant_id": "case_status_matches_expectation",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/canonicalization_binding.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/proof_finality.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/validator_abi_binding.json",
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/verifier_descriptor.json"
+      ],
+      "message": "case derived status=pass"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_proof_status_uses_acceptance_vocabulary:proof_status_not_collapsed_into_acceptance",
+      "case_id": "invalid_proof_status_uses_acceptance_vocabulary",
+      "invariant_id": "proof_status_not_collapsed_into_acceptance",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/verifier_descriptor.json"
+      ],
+      "message": "proof finality status ACCEPT collapses proof and acceptance vocabulary"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_proof_status_uses_acceptance_vocabulary:proof_finality_references_existing_proof",
+      "case_id": "invalid_proof_status_uses_acceptance_vocabulary",
+      "invariant_id": "proof_finality_references_existing_proof",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/verifier_descriptor.json"
+      ],
+      "message": "proof finality references existing proof and verifier descriptor"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_proof_status_uses_acceptance_vocabulary:companion_bindings_do_not_replace_core_semantics",
+      "case_id": "invalid_proof_status_uses_acceptance_vocabulary",
+      "invariant_id": "companion_bindings_do_not_replace_core_semantics",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/verifier_descriptor.json"
+      ],
+      "message": "companion bindings remain separate from core proof semantics"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_proof_status_uses_acceptance_vocabulary:case_status_matches_expectation",
+      "case_id": "invalid_proof_status_uses_acceptance_vocabulary",
+      "invariant_id": "case_status_matches_expectation",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary/artifacts/verifier_descriptor.json"
+      ],
+      "message": "case derived status=fail"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_missing_proof_reference:proof_status_not_collapsed_into_acceptance",
+      "case_id": "invalid_missing_proof_reference",
+      "invariant_id": "proof_status_not_collapsed_into_acceptance",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_missing_proof_reference/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_missing_proof_reference/artifacts/verifier_descriptor.json"
+      ],
+      "message": "proof finality vocabulary remains separate from acceptance"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_missing_proof_reference:proof_finality_references_existing_proof",
+      "case_id": "invalid_missing_proof_reference",
+      "invariant_id": "proof_finality_references_existing_proof",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_missing_proof_reference/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_missing_proof_reference/artifacts/verifier_descriptor.json"
+      ],
+      "message": "proof finality finality-phase3-missing-proof references missing proof proof-phase3-missing-proof"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_missing_proof_reference:case_status_matches_expectation",
+      "case_id": "invalid_missing_proof_reference",
+      "invariant_id": "case_status_matches_expectation",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_missing_proof_reference/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_missing_proof_reference/artifacts/verifier_descriptor.json"
+      ],
+      "message": "case derived status=fail"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_missing_verifier_descriptor:proof_status_not_collapsed_into_acceptance",
+      "case_id": "invalid_missing_verifier_descriptor",
+      "invariant_id": "proof_status_not_collapsed_into_acceptance",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_missing_verifier_descriptor/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/invalid_missing_verifier_descriptor/artifacts/proof_finality.json"
+      ],
+      "message": "proof finality vocabulary remains separate from acceptance"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_missing_verifier_descriptor:proof_finality_references_existing_proof",
+      "case_id": "invalid_missing_verifier_descriptor",
+      "invariant_id": "proof_finality_references_existing_proof",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_missing_verifier_descriptor/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/invalid_missing_verifier_descriptor/artifacts/proof_finality.json"
+      ],
+      "message": "proof proof-phase3-missing-verifier references missing verifier descriptor verifier-phase3-missing-verifier"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_missing_verifier_descriptor:case_status_matches_expectation",
+      "case_id": "invalid_missing_verifier_descriptor",
+      "invariant_id": "case_status_matches_expectation",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_missing_verifier_descriptor/artifacts/proof_artifact.json",
+        "conformance/cases/phase3/invalid_missing_verifier_descriptor/artifacts/proof_finality.json"
+      ],
+      "message": "case derived status=fail"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_binding_without_core_proof:proof_status_not_collapsed_into_acceptance",
+      "case_id": "invalid_binding_without_core_proof",
+      "invariant_id": "proof_status_not_collapsed_into_acceptance",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/canonicalization_binding.json",
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/validator_abi_binding.json"
+      ],
+      "message": "proof finality vocabulary remains separate from acceptance"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_binding_without_core_proof:proof_finality_references_existing_proof",
+      "case_id": "invalid_binding_without_core_proof",
+      "invariant_id": "proof_finality_references_existing_proof",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/canonicalization_binding.json",
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/validator_abi_binding.json"
+      ],
+      "message": "proof finality finality-phase3-binding-only references missing proof proof-phase3-binding-only"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_binding_without_core_proof:companion_bindings_do_not_replace_core_semantics",
+      "case_id": "invalid_binding_without_core_proof",
+      "invariant_id": "companion_bindings_do_not_replace_core_semantics",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/canonicalization_binding.json",
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/validator_abi_binding.json"
+      ],
+      "message": "companion bindings cannot replace missing proof artifacts"
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "invalid_binding_without_core_proof:case_status_matches_expectation",
+      "case_id": "invalid_binding_without_core_proof",
+      "invariant_id": "case_status_matches_expectation",
+      "expected": "fail",
+      "actual": "fail",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/canonicalization_binding.json",
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/proof_finality.json",
+        "conformance/cases/phase3/invalid_binding_without_core_proof/artifacts/validator_abi_binding.json"
+      ],
+      "message": "case derived status=fail"
+    }
+  ]
+}

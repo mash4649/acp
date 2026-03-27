@@ -1,0 +1,6 @@
+artifact_type: revision_v1
+schema_version: "1.0.0"
+protocol_version: "1.0"
+agreement_id: agr-min-001
+revision_id: rev-min-001
+created_at: "2026-03-19T00:01:00Z"

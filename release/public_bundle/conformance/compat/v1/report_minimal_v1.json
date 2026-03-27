@@ -1,0 +1,28 @@
+{
+  "run_id": "compat-v1-minimal",
+  "profile_id": "phase1-accountability-minimum",
+  "status": "pass",
+  "generated_at": "2026-03-26T00:00:00Z",
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "notes": [
+      "v1 minimal fixture"
+    ]
+  },
+  "results": [
+    {
+      "check_type": "schema",
+      "target_id": "schemas/vectors/valid/agreement_valid.json",
+      "vector_path": "schemas/vectors/valid/agreement_valid.json",
+      "schema_path": "schemas/core/agreement_v1.schema.json",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "schemas/vectors/valid/agreement_valid.json"
+      ]
+    }
+  ]
+}

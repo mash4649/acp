@@ -1,0 +1,40 @@
+{
+  "profile_id": "phase1-accountability-minimum",
+  "version": "1.0.0",
+  "description": "Phase 1 structural conformance profile for accountability-minimum artifacts",
+  "vector_manifest": "schemas/vectors/vector-manifest.json",
+  "vectors": {
+    "valid": [
+      "schemas/vectors/valid/agreement_valid.json",
+      "schemas/vectors/valid/revision_valid.json",
+      "schemas/vectors/valid/event_valid.json",
+      "schemas/vectors/valid/evidence_pack_valid.json",
+      "schemas/vectors/valid/verification_report_valid.json",
+      "schemas/vectors/valid/settlement_intent_valid.json",
+      "schemas/vectors/valid/freeze_record_valid.json"
+    ],
+    "invalid": [
+      "schemas/vectors/invalid/agreement_missing_agreement_id.json",
+      "schemas/vectors/invalid/revision_missing_revision_id.json",
+      "schemas/vectors/invalid/event_missing_event_type.json",
+      "schemas/vectors/invalid/evidence_pack_missing_id.json",
+      "schemas/vectors/invalid/verification_missing_acceptance_decision.json",
+      "schemas/vectors/invalid/settlement_missing_outcome.json",
+      "schemas/vectors/invalid/freeze_missing_event_commitment.json"
+    ]
+  },
+  "schema_map": {
+    "agreement": "schemas/core/agreement_v1.schema.json",
+    "revision": "schemas/core/revision_v1.schema.json",
+    "event": "schemas/core/event_v1.schema.json",
+    "evidence_pack": "schemas/core/evidence_pack_v1.schema.json",
+    "verification_report": "schemas/core/verification_report_v1.schema.json",
+    "settlement_intent": "schemas/core/settlement_intent_v1.schema.json",
+    "freeze_record": "schemas/core/freeze_record_v1.schema.json"
+  },
+  "meta_registries": [
+    "schemas/meta/reason-codes.json",
+    "schemas/meta/status-registers.json"
+  ],
+  "cases": []
+}

@@ -1,0 +1,75 @@
+# Public Documentation Index (EN/JA)
+
+This `docs/` directory is organized by language:
+
+- English docs: `docs/en/`
+- Japanese docs: `docs/ja/`
+
+## English documents
+- [Index](./en/README.md)
+- [Package baseline](./en/00_package_baseline.md)
+- [Message map](./en/01_message_map.md)
+- [Launch copy bank](./en/02_launch_copy_bank.md)
+- [Demo script (90s)](./en/03_demo_script_90s.md)
+- [Share FAQ](./en/04_share_faq.md)
+- [Anchor use case](./en/05_anchor_use_case.md)
+- [Comparison matrix (short)](./en/06_comparison_matrix_short.md)
+- [Channel playbook](./en/07_channel_playbook.md)
+- [Demo script (30s)](./en/08_demo_script_30s.md)
+- [Demo script (3min)](./en/09_demo_script_3min.md)
+- [Schema release plan](./en/10_schema_release_plan.md)
+- [Top 5 FAQ](./en/11_faq_top5.md)
+- [README repo-ready draft](./en/12_readme_repo_ready.md)
+- [Objection memo](./en/13_objection_memo.md)
+- [Issue submission packet](./en/14_issue_submission_packet.md)
+- [Real-world impact](./en/15_real_world_impact.md)
+- [v1 release execution plan](./en/16_v1_release_execution_plan.md)
+- [v1 Release policy](./en/17_v1_release_policy.md)
+- [Security/Ops minimum runbook](./en/18_security_ops_minimum_runbook.md)
+- [v1 declaration](./en/19_v1_declaration.md)
+- [Post-v1 roadmap](./en/20_post_v1_roadmap.md)
+- [Harness implementation guide](./en/22_harness_implementation_guide.md)
+- [Schema versioning policy](./en/23_schema_versioning_policy.md)
+- [Conformance certification](./en/24_conformance_certification.md)
+- [Integration patterns](./en/25_integration_patterns.md)
+- [Certification test suite](./en/26_certification_test_suite.md)
+- [Python SDK quickstart](./en/27_python_sdk_quickstart.md)
+- [Conformant implementation registry](./en/28_conformant_implementation_registry.md)
+- [Transport-agnostic artifact exchange protocol](./en/29_transport_agnostic_artifact_exchange_protocol.md)
+
+## 日本語ドキュメント
+- [索引](./ja/README.md)
+- [パッケージ基準](./ja/00_package_baseline.md)
+- [メッセージマップ](./ja/01_message_map.md)
+- [ローンチコピー集](./ja/02_launch_copy_bank.md)
+- [デモ台本（90秒）](./ja/03_demo_script_90s.md)
+- [共有向け FAQ](./ja/04_share_faq.md)
+- [アンカー事例](./ja/05_anchor_use_case.md)
+- [比較表（短縮版）](./ja/06_comparison_matrix_short.md)
+- [チャネル別発信ガイド](./ja/07_channel_playbook.md)
+- [デモ台本（30秒）](./ja/08_demo_script_30s.md)
+- [デモ台本（3分）](./ja/09_demo_script_3min.md)
+- [スキーマ公開計画](./ja/10_schema_release_plan.md)
+- [FAQ Top5](./ja/11_faq_top5.md)
+- [README 公開文案](./ja/12_readme_repo_ready.md)
+- [異議対応メモ](./ja/13_objection_memo.md)
+- [Issue 投稿パケット](./ja/14_issue_submission_packet.md)
+- [実務インパクト整理](./ja/15_real_world_impact.md)
+- [v1 実行計画（DoD付き）](./ja/16_v1_release_execution_plan.md)
+- [v1 リリースポリシー（exit criteria 固定）](./ja/17_v1_release_policy.md)
+- [Security/Ops 最小 runbook](./ja/18_security_ops_minimum_runbook.md)
+- [v1 成立宣言](./ja/19_v1_declaration.md)
+- [post-v1 ロードマップ](./ja/20_post_v1_roadmap.md)
+- [ハーネス実装ガイド](./ja/22_harness_implementation_guide.md)
+- [スキーマ版管理ポリシー](./ja/23_schema_versioning_policy.md)
+- [適合認定プログラム](./ja/24_conformance_certification.md)
+- [統合パターン集](./ja/25_integration_patterns.md)
+- [認定テストスイート](./ja/26_certification_test_suite.md)
+- [Python SDK クイックスタート](./ja/27_python_sdk_quickstart.md)
+- [適合実装レジストリ](./ja/28_conformant_implementation_registry.md)
+- [トランスポート非依存成果物交換プロトコル](./ja/29_transport_agnostic_artifact_exchange_protocol.md)
+
+## 検証（bundle ルート）
+
+- `./scripts/verify_v1_bundle.sh` — 依存導入後に公開チェック・selftest・required-external・security minimum を実行し、`conformance/out/` の証跡を更新（日英とも `19_v1_declaration.md` に手順と出力パスあり）
+- `public_release_check.sh` だけ先に通す場合は README の Launch Surface を参照
