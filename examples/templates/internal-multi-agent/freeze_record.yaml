@@ -1,0 +1,10 @@
+artifact_type: freeze_record_v1
+schema_version: "1.0.0"
+protocol_version: "1.0"
+agreement_id: agr-internal-001
+revision_id: rev-internal-001
+freeze_id: fr-internal-001
+state_commitment: sha256:state-internal-001
+evidence_commitment: sha256:evidence-internal-001
+event_commitment: sha256:event-internal-001
+frozen_at: "2026-03-27T00:03:00Z"

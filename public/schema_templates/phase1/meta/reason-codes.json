@@ -1,0 +1,17 @@
+{
+  "version": "0.1.0",
+  "reason_codes": [
+    "INTEGRITY_OK",
+    "INTEGRITY_FAIL",
+    "EVIDENCE_INSUFFICIENT",
+    "ACCEPT",
+    "PARTIAL_ACCEPT",
+    "REJECT",
+    "INCONCLUSIVE",
+    "SETTLEMENT_RELEASE",
+    "SETTLEMENT_PARTIAL_RELEASE",
+    "SETTLEMENT_HOLD",
+    "SETTLEMENT_BLOCK",
+    "SETTLEMENT_REFUND"
+  ]
+}

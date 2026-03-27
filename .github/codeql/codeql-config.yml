@@ -1,0 +1,7 @@
+name: "ACP CodeQL Config"
+
+paths-ignore:
+  - "atrakta_0.14.1/**"
+  - "release/public_bundle/**"
+  - "conformance/out/**"
+  - ".tmp/**"

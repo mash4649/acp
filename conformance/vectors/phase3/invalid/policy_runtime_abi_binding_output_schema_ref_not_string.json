@@ -1,0 +1,8 @@
+{
+  "binding_type": "policy_runtime_abi_binding_v1",
+  "binding_version": "1.0.0",
+  "policy_interface_id": "policy-interface-phase3-struct",
+  "input_schema_ref": "schemas/core/revision_v1.schema.json",
+  "output_schema_ref": 42,
+  "created_at": "2026-03-26T03:04:00Z"
+}

@@ -1,0 +1,8 @@
+artifact_type: event_v1
+schema_version: "1.0.0"
+protocol_version: "1.0"
+agreement_id: agr-marketing-001
+revision_id: rev-marketing-001
+event_id: evt-marketing-001
+event_type: REVISION_ACTIVATED
+created_at: "2026-03-27T00:01:00Z"

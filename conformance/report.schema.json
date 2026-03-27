@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://acp.example/conformance/report.schema.json",
+  "title": "ACP Conformance Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "profile_id",
+    "status",
+    "generated_at",
+    "summary",
+    "results"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "fail",
+        "error",
+        "mock",
+        "skipped"
+      ]
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total",
+        "passed",
+        "failed"
+      ],
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "passed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "vector_path",
+          "schema_path",
+          "expected",
+          "actual",
+          "verdict"
+        ],
+        "properties": {
+          "check_type": {
+            "type": "string",
+            "enum": [
+              "schema",
+              "invariant"
+            ]
+          },
+          "target_id": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "invariant_id": {
+            "type": "string"
+          },
+          "vector_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "schema_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail"
+            ]
+          },
+          "actual": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail",
+              "error",
+              "skipped"
+            ]
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "match",
+              "mismatch"
+            ]
+          },
+          "artifact_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "invalid_delegation_cycle",
+  "expected_status": "fail",
+  "expected_results": [
+    {
+      "invariant_id": "delegation_graph_acyclic",
+      "expected": "fail",
+      "message_contains": "cycle"
+    }
+  ]
+}

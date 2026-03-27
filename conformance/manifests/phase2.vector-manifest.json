@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "phase": "phase2",
+  "valid_vectors": [
+    "valid/delegation_edge_valid.json",
+    "valid/resource_reservation_valid.json",
+    "valid/data_policy_binding_valid.json",
+    "valid/effective_policy_projection_valid.json",
+    "valid/time_fact_valid.json"
+  ],
+  "invalid_vectors": [
+    "invalid/delegation_edge_missing_child_revision_id.json",
+    "invalid/resource_reservation_missing_reserved_amount.json",
+    "invalid/data_policy_binding_missing_policy_hash.json",
+    "invalid/effective_policy_projection_missing_time_fact_ref.json",
+    "invalid/time_fact_missing_observed_at.json"
+  ],
+  "expected": {
+    "valid": "pass",
+    "invalid": "fail"
+  }
+}

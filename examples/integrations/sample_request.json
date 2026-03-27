@@ -1,0 +1,28 @@
+{
+  "run_id": "integration-skeleton-sample",
+  "generated_at": "2026-03-26T00:00:00Z",
+  "contract": "../../conformance/harness_contract_v1.json",
+  "profile": {
+    "path": "../../conformance/profiles/phase1.profile.json",
+    "profile_id": "phase1-accountability-minimum"
+  },
+  "inputs": {
+    "vector_manifest": "schemas/vectors/vector-manifest.json",
+    "vectors": {
+      "valid": [
+        "schemas/vectors/valid/agreement_valid.json"
+      ],
+      "invalid": [
+        "schemas/vectors/invalid/agreement_missing_agreement_id.json"
+      ]
+    },
+    "schema_map": {
+      "agreement": "schemas/core/agreement_v1.schema.json"
+    },
+    "meta_registries": [
+      "schemas/meta/reason-codes.json",
+      "schemas/meta/status-registers.json"
+    ],
+    "cases": []
+  }
+}

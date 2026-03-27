@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "registry_id": "urn:acp:meta:status-registers:1.0.0",
+  "frozen": true,
+  "lifecycle_status": [
+    "DRAFT",
+    "ACTIVE",
+    "DISPUTE",
+    "CLOSED"
+  ],
+  "verification_status": [
+    "PENDING",
+    "ACCEPT",
+    "PARTIAL_ACCEPT",
+    "REJECT",
+    "INCONCLUSIVE"
+  ],
+  "settlement_status": [
+    "NONE",
+    "REQUESTED",
+    "RESERVED",
+    "RELEASED",
+    "PARTIAL_RELEASED",
+    "HELD",
+    "BLOCKED",
+    "REFUNDED"
+  ]
+}

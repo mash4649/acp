@@ -1,0 +1,15 @@
+{
+  "case_id": "invalid_missing_verifier_descriptor",
+  "expected_status": "fail",
+  "expected_results": [
+    {
+      "invariant_id": "proof_status_not_collapsed_into_acceptance",
+      "expected": "pass"
+    },
+    {
+      "invariant_id": "proof_finality_references_existing_proof",
+      "expected": "fail",
+      "message_contains": "missing verifier descriptor"
+    }
+  ]
+}

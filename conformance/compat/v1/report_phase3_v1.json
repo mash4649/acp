@@ -1,0 +1,42 @@
+{
+  "run_id": "compat-v1-phase3",
+  "profile_id": "phase3-proof-surface-bindings",
+  "status": "pass",
+  "generated_at": "2026-03-26T00:10:00Z",
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "notes": [
+      "v1 phase3 fixture"
+    ]
+  },
+  "results": [
+    {
+      "check_type": "schema",
+      "target_id": "conformance/vectors/phase3/valid/proof_artifact_valid.json",
+      "vector_path": "conformance/vectors/phase3/valid/proof_artifact_valid.json",
+      "schema_path": "schemas/core/proof_artifact_v1.schema.json",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/vectors/phase3/valid/proof_artifact_valid.json"
+      ]
+    },
+    {
+      "check_type": "invariant",
+      "target_id": "valid_proof_surface_complete:proof_references_resolved",
+      "case_id": "valid_proof_surface_complete",
+      "invariant_id": "proof_references_resolved",
+      "vector_path": "conformance/cases/phase3/valid_proof_surface_complete",
+      "schema_path": "conformance/cases/phase3/valid_proof_surface_complete/expected.json",
+      "expected": "pass",
+      "actual": "pass",
+      "verdict": "match",
+      "artifact_refs": [
+        "conformance/cases/phase3/valid_proof_surface_complete/artifacts/proof_finality.json"
+      ]
+    }
+  ]
+}

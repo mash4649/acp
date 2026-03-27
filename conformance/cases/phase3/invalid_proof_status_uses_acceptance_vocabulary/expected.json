@@ -1,0 +1,19 @@
+{
+  "case_id": "invalid_proof_status_uses_acceptance_vocabulary",
+  "expected_status": "fail",
+  "expected_results": [
+    {
+      "invariant_id": "proof_status_not_collapsed_into_acceptance",
+      "expected": "fail",
+      "message_contains": "collapses proof and acceptance vocabulary"
+    },
+    {
+      "invariant_id": "proof_finality_references_existing_proof",
+      "expected": "pass"
+    },
+    {
+      "invariant_id": "companion_bindings_do_not_replace_core_semantics",
+      "expected": "pass"
+    }
+  ]
+}

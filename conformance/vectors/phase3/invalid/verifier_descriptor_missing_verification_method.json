@@ -1,0 +1,8 @@
+{
+  "artifact_type": "verifier_descriptor_v1",
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0",
+  "verifier_id": "verifier-phase3-invalid-001",
+  "trust_root_ref": "trust-root-phase3-001",
+  "created_at": "2026-03-19T05:01:00Z"
+}

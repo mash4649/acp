@@ -1,0 +1,102 @@
+name: ACP Release Signatures
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing release tag to sign (for re-run)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  sign_release:
+    runs-on: ubuntu-latest
+    env:
+      TAG_NAME: ${{ github.event_name == 'release' && github.event.release.tag_name || github.event.inputs.tag }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify signed annotated tag
+        uses: actions/github-script@v7
+        env:
+          INPUT_TAG: ${{ env.TAG_NAME }}
+        with:
+          script: |
+            const rawTag = process.env.INPUT_TAG;
+            const tag = rawTag.replace(/^refs\/tags\//, "");
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const ref = await github.rest.git.getRef({
+              owner,
+              repo,
+              ref: `tags/${tag}`,
+            });
+
+            if (ref.data.object.type !== "tag") {
+              core.setFailed(`Tag ${tag} must be an annotated tag object (found: ${ref.data.object.type}).`);
+              return;
+            }
+
+            const tagObj = await github.rest.git.getTag({
+              owner,
+              repo,
+              tag_sha: ref.data.object.sha,
+            });
+
+            const verification = tagObj.data.verification || {};
+            if (!verification.verified) {
+              const reason = verification.reason || "unsigned_or_unverified";
+              core.setFailed(`Tag ${tag} is not signature-verified by GitHub API: ${reason}`);
+              return;
+            }
+
+            core.info(`Signed tag verified: ${tag}`);
+
+      - name: Build source archive and checksum
+        run: |
+          set -euo pipefail
+          archive="acp-${TAG_NAME}.tar.gz"
+          git archive --format=tar.gz --output "$archive" "$TAG_NAME"
+          sha256sum "$archive" > "$archive.sha256"
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3.7.0
+
+      - name: Sign checksum with cosign keyless
+        run: |
+          set -euo pipefail
+          archive="acp-${TAG_NAME}.tar.gz"
+          cosign sign-blob --yes \
+            --output-signature "$archive.sha256.sig" \
+            --output-certificate "$archive.sha256.pem" \
+            "$archive.sha256"
+
+      - name: Verify checksum signature
+        run: |
+          set -euo pipefail
+          archive="acp-${TAG_NAME}.tar.gz"
+          cosign verify-blob \
+            --certificate "$archive.sha256.pem" \
+            --signature "$archive.sha256.sig" \
+            "$archive.sha256"
+
+      - name: Upload signed artifacts to release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          files: |
+            acp-${{ env.TAG_NAME }}.tar.gz
+            acp-${{ env.TAG_NAME }}.tar.gz.sha256
+            acp-${{ env.TAG_NAME }}.tar.gz.sha256.sig
+            acp-${{ env.TAG_NAME }}.tar.gz.sha256.pem

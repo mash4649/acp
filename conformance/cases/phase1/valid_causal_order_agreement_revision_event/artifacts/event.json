@@ -1,0 +1,10 @@
+{
+  "artifact_type": "event_v1",
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0",
+  "agreement_id": "agr-phase1-001",
+  "revision_id": "rev-phase1-001",
+  "event_id": "evt-phase1-001",
+  "event_type": "REVISION_ACTIVATED",
+  "created_at": "2026-03-25T00:02:00Z"
+}

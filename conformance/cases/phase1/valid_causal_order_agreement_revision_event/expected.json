@@ -1,0 +1,10 @@
+{
+  "case_id": "valid_causal_order_agreement_revision_event",
+  "expected_status": "pass",
+  "expected_results": [
+    {
+      "invariant_id": "phase1_causal_order_agreement_revision_event",
+      "expected": "pass"
+    }
+  ]
+}

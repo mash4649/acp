@@ -1,0 +1,57 @@
+{
+  "name": "acp-schema-assistant",
+  "displayName": "ACP Schema Assistant",
+  "description": "VS Code schema validation and completion for ACP artifact JSON files.",
+  "version": "0.1.0",
+  "publisher": "acp",
+  "license": "Apache-2.0",
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "acp",
+    "schema",
+    "json",
+    "validation"
+  ],
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "contributes": {
+    "jsonValidation": [
+      {
+        "fileMatch": [
+          "**/agreement.json",
+          "**/*agreement*.json"
+        ],
+        "url": "./schemas/core/agreement_v1.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/revision.json",
+          "**/*revision*.json"
+        ],
+        "url": "./schemas/core/revision_v1.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/event.json",
+          "**/*event*.json"
+        ],
+        "url": "./schemas/core/event_v1.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/delegation_edge.json",
+          "**/*delegation*edge*.json"
+        ],
+        "url": "./schemas/core/delegation_edge_v1.schema.json"
+      }
+    ]
+  },
+  "files": [
+    "README.md",
+    "schemas/core/*.schema.json"
+  ]
+}

@@ -1,0 +1,9 @@
+artifact_type: verification_report_v1
+schema_version: "1.0.0"
+protocol_version: "1.0"
+agreement_id: agr-research-001
+revision_id: rev-research-001
+verification_id: vr-research-001
+integrity_decision: PASS
+acceptance_decision: ACCEPT
+created_at: "2026-03-27T00:02:00Z"

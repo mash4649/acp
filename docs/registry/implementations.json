@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "generated_at": "2026-03-26T16:00:00Z",
+  "entries": [
+    {
+      "implementation_id": "acp-reference-harness-self-001",
+      "name": "ACP Reference Harness (Repo-local)",
+      "maintainer": "ACP Maintainers",
+      "certification_level": "L3",
+      "status": "active",
+      "self_authored": true,
+      "profiles": [
+        "phase1-accountability-minimum",
+        "phase2-delegation-policy-safety",
+        "phase3-proof-surface-bindings"
+      ],
+      "evidence": {
+        "report_url": "../conformance/out/report.phase3.json",
+        "suite_manifest_url": "../.tmp/certification-suite/ACP-certification-suite-level3/manifest.json"
+      },
+      "issued_at": "2026-03-26",
+      "renewal_due": "2026-06-24",
+      "notes": "Seed entry. Self-authored implementation is listed for transparency and does not count toward external implementation KPI."
+    }
+  ]
+}

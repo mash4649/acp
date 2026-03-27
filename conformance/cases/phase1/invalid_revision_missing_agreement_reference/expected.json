@@ -1,0 +1,11 @@
+{
+  "case_id": "invalid_revision_missing_agreement_reference",
+  "expected_status": "fail",
+  "expected_results": [
+    {
+      "invariant_id": "phase1_revision_references_existing_agreement",
+      "expected": "fail",
+      "message_contains": "missing agreement"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0",
+  "phase": "phase1",
+  "valid_vectors": [
+    "valid/agreement_valid.json",
+    "valid/revision_valid.json",
+    "valid/event_valid.json",
+    "valid/evidence_pack_valid.json",
+    "valid/verification_report_valid.json",
+    "valid/settlement_intent_valid.json",
+    "valid/freeze_record_valid.json"
+  ],
+  "invalid_vectors": [
+    "invalid/agreement_missing_agreement_id.json",
+    "invalid/revision_missing_revision_id.json",
+    "invalid/event_missing_event_type.json",
+    "invalid/evidence_pack_missing_id.json",
+    "invalid/verification_missing_acceptance_decision.json",
+    "invalid/settlement_missing_outcome.json",
+    "invalid/freeze_missing_event_commitment.json"
+  ],
+  "expected": {
+    "valid": "pass",
+    "invalid": "fail"
+  }
+}

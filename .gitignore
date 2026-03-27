@@ -1,0 +1,21 @@
+.DS_Store
+
+# Local/runtime caches and temporary artifacts (not for distribution)
+.tmp/
+
+# Python local artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# JavaScript local artifacts
+sdk/js/acp-sdk-js/node_modules/
+sdk/js/acp-sdk-js/coverage/
+sdk/js/acp-sdk-js/.eslintcache
+
+# Vendored local verification product (kept out of ACP distribution repo)
+vendor/atrakta_0.14.1/

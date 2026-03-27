@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:acp:schemas:companion:validator_abi_binding_v1",
+  "title": "validator_abi_binding_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "binding_type",
+    "binding_version",
+    "validator_interface_id",
+    "input_schema_ref",
+    "output_schema_ref",
+    "created_at"
+  ],
+  "properties": {
+    "binding_type": {
+      "const": "validator_abi_binding_v1"
+    },
+    "binding_version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "validator_interface_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9._:/-]+$"
+    },
+    "input_schema_ref": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9._:/-]+$"
+    },
+    "output_schema_ref": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9._:/-]+$"
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date-time"
+    }
+  }
+}

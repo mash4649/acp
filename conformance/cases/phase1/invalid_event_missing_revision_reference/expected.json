@@ -1,0 +1,11 @@
+{
+  "case_id": "invalid_event_missing_revision_reference",
+  "expected_status": "fail",
+  "expected_results": [
+    {
+      "invariant_id": "phase1_event_references_existing_revision",
+      "expected": "fail",
+      "message_contains": "missing revision"
+    }
+  ]
+}

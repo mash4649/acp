@@ -1,0 +1,7 @@
+{
+  "runner_path": "../../release/public_bundle/scripts/acp_harness_runner.sh",
+  "contract_path": "../../conformance/harness_contract_v1.json",
+  "profile_path": "../../conformance/profiles/phase1.profile.json",
+  "request_path": "./sample_request.json",
+  "report_dir": "./out"
+}

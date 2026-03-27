@@ -1,0 +1,72 @@
+{
+  "profile_id": "phase3-proof-surface-bindings",
+  "version": "1.0.0",
+  "description": "Phase 3 schema and invariant profile for proof surfaces and companion bindings",
+  "vector_manifest": "conformance/manifests/phase3.vector-manifest.json",
+  "vectors": {
+    "valid": [
+      "conformance/vectors/phase3/valid/proof_artifact_valid.json",
+      "conformance/vectors/phase3/valid/verifier_descriptor_valid.json",
+      "conformance/vectors/phase3/valid/proof_finality_valid.json",
+      "conformance/vectors/phase3/valid/canonicalization_binding_valid.json",
+      "conformance/vectors/phase3/valid/validator_abi_binding_valid.json",
+      "conformance/vectors/phase3/valid/signature_envelope_binding_valid.json",
+      "conformance/vectors/phase3/valid/trust_registry_binding_valid.json",
+      "conformance/vectors/phase3/valid/policy_runtime_abi_binding_valid.json",
+      "conformance/vectors/phase3/valid/dispute_process_binding_valid.json",
+      "conformance/vectors/phase3/valid/transparency_binding_valid.json",
+      "conformance/vectors/phase3/valid/oracle_market_binding_valid.json",
+      "conformance/vectors/phase3/valid/streaming_settlement_binding_valid.json"
+    ],
+    "invalid": [
+      "conformance/vectors/phase3/invalid/proof_artifact_missing_statement_hash.json",
+      "conformance/vectors/phase3/invalid/proof_artifact_wrong_artifact_type.json",
+      "conformance/vectors/phase3/invalid/verifier_descriptor_missing_verification_method.json",
+      "conformance/vectors/phase3/invalid/proof_finality_missing_status.json",
+      "conformance/vectors/phase3/invalid/canonicalization_binding_missing_algorithm.json",
+      "conformance/vectors/phase3/invalid/canonicalization_binding_unknown_field.json",
+      "conformance/vectors/phase3/invalid/canonicalization_binding_algorithm_not_string.json",
+      "conformance/vectors/phase3/invalid/validator_abi_binding_missing_output_schema_ref.json",
+      "conformance/vectors/phase3/invalid/validator_abi_binding_input_schema_ref_not_string.json",
+      "conformance/vectors/phase3/invalid/signature_envelope_binding_missing_envelope_type.json",
+      "conformance/vectors/phase3/invalid/signature_envelope_binding_key_reference_mode_not_string.json",
+      "conformance/vectors/phase3/invalid/trust_registry_binding_missing_resolution_mode.json",
+      "conformance/vectors/phase3/invalid/trust_registry_binding_resolution_mode_not_string.json",
+      "conformance/vectors/phase3/invalid/policy_runtime_abi_binding_missing_output_schema_ref.json",
+      "conformance/vectors/phase3/invalid/policy_runtime_abi_binding_output_schema_ref_not_string.json",
+      "conformance/vectors/phase3/invalid/dispute_process_binding_missing_challenge_window_ref.json",
+      "conformance/vectors/phase3/invalid/dispute_process_binding_challenge_window_ref_not_string.json",
+      "conformance/vectors/phase3/invalid/transparency_binding_missing_anchor_mode.json",
+      "conformance/vectors/phase3/invalid/transparency_binding_anchor_mode_not_string.json",
+      "conformance/vectors/phase3/invalid/oracle_market_binding_missing_panel_rule_ref.json",
+      "conformance/vectors/phase3/invalid/oracle_market_binding_panel_rule_ref_not_string.json",
+      "conformance/vectors/phase3/invalid/streaming_settlement_binding_missing_idempotency_mode.json",
+      "conformance/vectors/phase3/invalid/streaming_settlement_binding_idempotency_mode_not_string.json"
+    ]
+  },
+  "schema_map": {
+    "proof_artifact": "schemas/core/proof_artifact_v1.schema.json",
+    "verifier_descriptor": "schemas/core/verifier_descriptor_v1.schema.json",
+    "proof_finality": "schemas/core/proof_finality_v1.schema.json",
+    "canonicalization_binding": "schemas/companion/canonicalization_binding_v1.schema.json",
+    "signature_envelope_binding": "schemas/companion/signature_envelope_binding_v1.schema.json",
+    "trust_registry_binding": "schemas/companion/trust_registry_binding_v1.schema.json",
+    "validator_abi_binding": "schemas/companion/validator_abi_binding_v1.schema.json",
+    "policy_runtime_abi_binding": "schemas/companion/policy_runtime_abi_binding_v1.schema.json",
+    "dispute_process_binding": "schemas/companion/dispute_process_binding_v1.schema.json",
+    "transparency_binding": "schemas/companion/transparency_binding_v1.schema.json",
+    "oracle_market_binding": "schemas/companion/oracle_market_binding_v1.schema.json",
+    "streaming_settlement_binding": "schemas/companion/streaming_settlement_binding_v1.schema.json"
+  },
+  "meta_registries": [
+    "schemas/meta/reason-codes.json",
+    "schemas/meta/status-registers.json"
+  ],
+  "cases": [
+    "conformance/cases/phase3/valid_proof_surface_complete",
+    "conformance/cases/phase3/invalid_proof_status_uses_acceptance_vocabulary",
+    "conformance/cases/phase3/invalid_missing_proof_reference",
+    "conformance/cases/phase3/invalid_missing_verifier_descriptor",
+    "conformance/cases/phase3/invalid_binding_without_core_proof"
+  ]
+}
