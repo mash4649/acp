@@ -92,17 +92,17 @@ Release prerequisite outside this repo:
 ACP complements MCP, A2A, workflow engines, and payment systems by providing accountability semantics across them.
 
 ## Public Package Links
-- Baseline: `public/00_package_baseline.txt`
-- Message map: `public/01_message_map.md`
-- Launch copy bank: `public/02_launch_copy_bank.md`
-- Demo script: `public/03_demo_script_90s.md`
-- Share FAQ: `public/04_share_faq.md`
-- Channel playbook: `public/07_channel_playbook.md`
-- Demo script (30s): `public/08_demo_script_30s.md`
-- Demo script (3min): `public/09_demo_script_3min.md`
-- Objection memo: `public/13_objection_memo.md`
-- Schema release plan: `public/10_schema_release_plan.md`
-- Use case: `public/05_anchor_use_case.txt`
-- Matrix: `public/06_comparison_matrix_short.txt`
-- FAQ (top 5): `public/11_faq_top5.md`
-- Issue packet: `public/14_issue_submission_packet.md`
+- Baseline: `public/en/00_package_baseline.txt`
+- Message map: `public/en/01_message_map.md`
+- Launch copy bank: `public/en/02_launch_copy_bank.md`
+- Demo script: `public/en/03_demo_script_90s.md`
+- Share FAQ: `public/en/04_share_faq.md`
+- Channel playbook: `public/en/07_channel_playbook.md`
+- Demo script (30s): `public/en/08_demo_script_30s.md`
+- Demo script (3min): `public/en/09_demo_script_3min.md`
+- Objection memo: `public/en/13_objection_memo.md`
+- Schema release plan: `public/en/10_schema_release_plan.md`
+- Use case: `public/en/05_anchor_use_case.txt`
+- Matrix: `public/en/06_comparison_matrix_short.txt`
+- FAQ (top 5): `public/en/11_faq_top5.md`
+- Issue packet: `public/en/14_issue_submission_packet.md`

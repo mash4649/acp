@@ -53,7 +53,7 @@ Please comment on minimum interoperable representations (field groups and vocabu
 - No transport/execution/payment scope creep
 
 ## Supporting Drafts
-- `public/00_package_baseline.txt`
-- `public/10_schema_release_plan.md`
-- `public/06_comparison_matrix_short.txt`
-- `public/11_faq_top5.md`
+- `public/en/00_package_baseline.txt`
+- `public/en/10_schema_release_plan.md`
+- `public/en/06_comparison_matrix_short.txt`
+- `public/en/11_faq_top5.md`

@@ -5,7 +5,7 @@ Last aligned with: ACP v1.0 Final-Revised Draft
 
 # Phase 1 Schema Templates
 
-This folder contains concrete starter templates for Phase 1 in `public/10_schema_release_plan.md`.
+This folder contains concrete starter templates for Phase 1 in `public/en/10_schema_release_plan.md`.
 
 ## Files
 - core/agreement_v1.schema.json

@@ -1,8 +1,18 @@
 # ACP (AI Contract Protocol)
 
+ACP is an accountability layer for delegated AI work.
+
+ACP is not an execution framework, not a transport protocol, and not a payment rail.
+
 ## Tagline
 
 A concrete accountability protocol for delegated AI work: contract it, verify it, settle it.
+
+## The three lines to remember
+
+- Prompt is not contract.
+- Claim is not evidence.
+- Verification is not settlement.
 
 ---
 

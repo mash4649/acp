@@ -1,0 +1,17 @@
+Status: Draft
+Type: Reference
+
+# ACP Public Package Baseline
+
+- ACP is an accountability layer for delegated AI work.
+- ACP is not an execution framework, transport protocol, or payment rail.
+- Keep the three separations explicit: prompt != contract, claim != evidence, verification != settlement.
+- Keep all external messaging aligned to Core-15 and replayable accountability.
+- Avoid broad replacement claims against MCP/A2A/workflow engines/payment rails.
+
+# ACP 公開パッケージ基準（日本語補助）
+
+- ACPは委任AI作業のための説明責任レイヤ。
+- 実行基盤/通信規格/決済レールの置き換えを主張しない。
+- `prompt != contract`、`claim != evidence`、`verification != settlement` を必ず分離する。
+- Core-15 と再現可能な検証可能性に整合させる。
