@@ -1,5 +1,0 @@
-name: "ACP CodeQL Config"
-
-paths-ignore:
-  - "conformance/out/**"
-  - ".tmp/**"
