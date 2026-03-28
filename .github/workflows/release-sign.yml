@@ -27,7 +27,7 @@ jobs:
           fetch-depth: 0
 
       - name: Verify signed annotated tag
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           INPUT_TAG: ${{ env.TAG_NAME }}
         with:
