@@ -17,10 +17,10 @@ ACP is an accountability layer for delegated AI work.
 ## Audience map
 | Audience | What they care about | Surface headline | Core proof anchor | Call to action |
 |---|---|---|---|---|
-| Standards researchers | Precise boundary, replayability, interoperability | "Accountability semantics without replacing your stack." | `prompt != contract`, `claim != evidence`, `verification != settlement` + Core-15 | Review `public_assets/en/06_comparison_matrix_short.txt` and `public_assets/en/10_schema_release_plan.md` |
+| Standards researchers | Precise boundary, replayability, interoperability | "Accountability semantics without replacing your stack." | `prompt != contract`, `claim != evidence`, `verification != settlement` + Core-15 | Review `assets/en/06_comparison_matrix_short.txt` and `assets/en/10_schema_release_plan.md` |
 | Protocol/infra engineers | Deterministic artifacts and verification surface | "Append-only causal history that can be audited and replayed." | `event`, `evidence_pack`, `verification_report`, `settlement_intent`, `freeze_record` | Run `./scripts/conformance_selftest.sh` |
-| AI builders and creators | Trustable collaboration and dispute handling | "When delegated AI work fails, accountability does not disappear." | Delegation edge + reservation + freeze/dispute hooks | Review `public_assets/en/05_anchor_use_case.txt` |
-| Influencers/media | Clear category and why now | "ACP is the missing accountability layer between prompts and outcomes." | Narrow core + strong invariants + companion profiles | Use `public_assets/en/02_launch_copy_bank.md` snippets |
+| AI builders and creators | Trustable collaboration and dispute handling | "When delegated AI work fails, accountability does not disappear." | Delegation edge + reservation + freeze/dispute hooks | Review `assets/en/05_anchor_use_case.txt` |
+| Influencers/media | Clear category and why now | "ACP is the missing accountability layer between prompts and outcomes." | Narrow core + strong invariants + companion profiles | Use `assets/en/02_launch_copy_bank.md` snippets |
 
 ## 30-second narrative
 Delegated AI work spans many runtimes, tools, and organizations. Logs alone are not enough for shared accountability. ACP defines a narrow, interoperable accountability boundary: agreement and revision control, append-only causal events, evidence-linked verification, explicit settlement intent, and dispute/freeze hooks. ACP complements transport, execution, and payment layers rather than replacing them.

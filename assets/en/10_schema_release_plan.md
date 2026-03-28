@@ -46,8 +46,8 @@ Gate checks:
 - Freeze commitment fields present
 - Decision vocabulary aligns with reason-codes registry
 - Phase 1 vector bundle passes expected outcomes:
-  - `public_assets/schema_templates/phase1/vectors/valid/*` => pass
-  - `public_assets/schema_templates/phase1/vectors/invalid/*` => fail
+  - `assets/schema_templates/phase1/vectors/valid/*` => pass
+  - `assets/schema_templates/phase1/vectors/invalid/*` => fail
 
 ## Phase 2: Delegation/Policy Safety
 Target: safe child activation and replayable policy surface.

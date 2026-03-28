@@ -13,7 +13,7 @@ This folder provides starter vectors for Phase 1 schemas.
 - `vector-manifest.json`: list of vectors and expected result
 
 ## Intended use
-Run each vector against the matching schema from `public_assets/schema_templates/phase1/core/`.
+Run each vector against the matching schema from `assets/schema_templates/phase1/core/`.
 
 ## Scope note
 These vectors test only structural schema conformance. They do not test full protocol invariants.

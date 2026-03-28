@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Copies the curated public bundle from release/distribution_bundle/ to a destination directory.
-# The canonical, versioned tree lives under release/distribution_bundle/ (not project/public_assets/).
+# The canonical, versioned tree lives under release/distribution_bundle/ (not acp/assets/).
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CANONICAL="$ROOT_DIR/release/distribution_bundle"

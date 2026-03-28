@@ -9,4 +9,4 @@ Type: Reference
 想定反論: 「ログで十分では?」
 - 回答: 共有検証可能な成果物境界がないと監査・争議で破綻
 
-参照: `public_assets/ja/06_comparison_matrix_short.txt`, `public_assets/ja/11_faq_top5.md`
+参照: `assets/ja/06_comparison_matrix_short.txt`, `assets/ja/11_faq_top5.md`

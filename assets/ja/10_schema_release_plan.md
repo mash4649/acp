@@ -8,5 +8,5 @@ Type: Reference
 - Phase 3: proof surface と companion拡張
 
 検証方針:
-- `public_assets/schema_templates/phase1/vectors/valid/*` は pass
-- `public_assets/schema_templates/phase1/vectors/invalid/*` は fail
+- `assets/schema_templates/phase1/vectors/valid/*` は pass
+- `assets/schema_templates/phase1/vectors/invalid/*` は fail

@@ -19,6 +19,12 @@
 
 `タスク成果物 -> ACP検証実行 -> 検証レポート -> 清算意思`
 
+## ディレクトリ役割
+
+- `docs/` = 正本となる説明書
+- `assets/` = 編集可能な公開素材
+- `release/` = 固定された配布物
+
 ---
 
 ## TL;DR
@@ -108,6 +114,7 @@ ls conformance/out
 - `scripts/`: 検証、実行、バンドル生成の操作群
 - `examples/`: minimal / delegated-research の参照バンドル
 - `sdk/`: JS / Python SDK
+- `assets/`: ローンチ文言、FAQ、デモ台本、スキーマテンプレート
 
 ---
 
@@ -157,6 +164,7 @@ ls conformance/out
 | 英語ドキュメント索引 | `docs/en/README.md` |
 | 日本語ドキュメント索引 | `docs/ja/README.md` |
 | 統合索引 | `docs/README.md` |
+| 公開素材索引 | `assets/README.md` |
 | 公開範囲ガイド | `DISTRIBUTION_SCOPE.md` |
 | コントリビューション | `CONTRIBUTING.md` |
 | ガバナンス | `GOVERNANCE.md` |

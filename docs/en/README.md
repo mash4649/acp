@@ -1,9 +1,21 @@
 # ACP Docs Index
 
+## Reading layers
+
+- `docs/` = authoritative documentation
+- `assets/` = editable public-facing materials
+- `release/` = frozen distribution artifacts
+
+## Related public materials
+
+- [Public assets index](../../assets/README.md)
+- [Public documentation index](../../release/distribution_bundle/docs/README.md)
+
 ## Core docs
 - [Real-world impact](./15_real_world_impact.md)
 - [v1 release execution plan](./16_v1_release_execution_plan.md)
 - [Post-v1 roadmap](./20_post_v1_roadmap.md)
+- [Repository structure assessment](./repo_structure_assessment.md)
 - [5-minute quickstart](./21_quickstart_5min.md)
 - [Harness implementation guide](./22_harness_implementation_guide.md)
 - [Schema versioning policy](./23_schema_versioning_policy.md)

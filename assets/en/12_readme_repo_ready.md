@@ -92,17 +92,17 @@ Release prerequisite outside this repo:
 ACP complements MCP, A2A, workflow engines, and payment systems by providing accountability semantics across them.
 
 ## Public Package Links
-- Baseline: `public_assets/en/00_package_baseline.txt`
-- Message map: `public_assets/en/01_message_map.md`
-- Launch copy bank: `public_assets/en/02_launch_copy_bank.md`
-- Demo script: `public_assets/en/03_demo_script_90s.md`
-- Share FAQ: `public_assets/en/04_share_faq.md`
-- Channel playbook: `public_assets/en/07_channel_playbook.md`
-- Demo script (30s): `public_assets/en/08_demo_script_30s.md`
-- Demo script (3min): `public_assets/en/09_demo_script_3min.md`
-- Objection memo: `public_assets/en/13_objection_memo.md`
-- Schema release plan: `public_assets/en/10_schema_release_plan.md`
-- Use case: `public_assets/en/05_anchor_use_case.txt`
-- Matrix: `public_assets/en/06_comparison_matrix_short.txt`
-- FAQ (top 5): `public_assets/en/11_faq_top5.md`
-- Issue packet: `public_assets/en/14_issue_submission_packet.md`
+- Baseline: `assets/en/00_package_baseline.txt`
+- Message map: `assets/en/01_message_map.md`
+- Launch copy bank: `assets/en/02_launch_copy_bank.md`
+- Demo script: `assets/en/03_demo_script_90s.md`
+- Share FAQ: `assets/en/04_share_faq.md`
+- Channel playbook: `assets/en/07_channel_playbook.md`
+- Demo script (30s): `assets/en/08_demo_script_30s.md`
+- Demo script (3min): `assets/en/09_demo_script_3min.md`
+- Objection memo: `assets/en/13_objection_memo.md`
+- Schema release plan: `assets/en/10_schema_release_plan.md`
+- Use case: `assets/en/05_anchor_use_case.txt`
+- Matrix: `assets/en/06_comparison_matrix_short.txt`
+- FAQ (top 5): `assets/en/11_faq_top5.md`
+- Issue packet: `assets/en/14_issue_submission_packet.md`

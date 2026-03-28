@@ -9,4 +9,4 @@ Type: Reference
 - 関連成果物ID（agreement/revision/event/report）
 - 提案する修正案
 
-関連: `public_assets/ja/00_package_baseline.txt`, `public_assets/ja/10_schema_release_plan.md`
+関連: `assets/ja/00_package_baseline.txt`, `assets/ja/10_schema_release_plan.md`

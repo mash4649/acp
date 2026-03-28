@@ -14,6 +14,12 @@ A concrete accountability protocol for delegated AI work: contract it, verify it
 - Claim is not evidence.
 - Verification is not settlement.
 
+## Directory roles
+
+- `docs/` = authoritative documentation
+- `assets/` = editable public-facing materials
+- `release/` = frozen distribution artifacts
+
 ---
 
 ## Demo
@@ -118,6 +124,7 @@ ls conformance/out
 - `scripts/`: validation, conformance execution, bundle/export helpers
 - `examples/`: minimal and delegated-research reference bundles
 - `sdk/`: JS and Python SDK packages
+- `assets/`: launch copy, FAQ, demo scripts, and schema templates
 
 ---
 
@@ -167,6 +174,7 @@ ls conformance/out
 | English docs index | `docs/en/README.md` |
 | Japanese docs index | `docs/ja/README.md` |
 | Combined docs index | `docs/README.md` |
+| Public assets index | `assets/README.md` |
 | Distribution scope | `DISTRIBUTION_SCOPE.md` |
 | Contribution guide | `CONTRIBUTING.md` |
 | Governance | `GOVERNANCE.md` |

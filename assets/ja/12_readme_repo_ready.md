@@ -10,6 +10,6 @@ Type: Reference
 - 比較表と導線がある
 
 参照:
-- `public_assets/ja/00_package_baseline.txt`
-- `public_assets/ja/01_message_map.md`
-- `public_assets/ja/10_schema_release_plan.md`
+- `assets/ja/00_package_baseline.txt`
+- `assets/ja/01_message_map.md`
+- `assets/ja/10_schema_release_plan.md`

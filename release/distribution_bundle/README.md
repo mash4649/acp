@@ -4,6 +4,9 @@ ACP is an accountability layer for delegated AI work.
 
 ACP is not an execution framework, not a transport protocol, and not a payment rail.
 
+Read-only: this directory is a frozen distribution artifact.
+Edit source materials in `docs/`, `assets/`, `examples/`, `schemas/`, and `scripts/`, then regenerate the bundle.
+
 ## Start here (for both engineers and non-engineers)
 
 - **One-page baseline (scope + Core-15 + required separations)**: `docs/en/00_package_baseline.md`
@@ -62,7 +65,7 @@ ACP complements MCP, A2A, workflow engines, and payment systems by providing acc
 - `docs/en/13_objection_memo.md`
 - `./scripts/public_release_check.sh` validates public messaging guardrails (requires **ripgrep** `rg`; on macOS: `brew install ripgrep`)
 - `./scripts/verify_v1_bundle.sh` runs install + all v1 gates and refreshes `conformance/out/` audit evidence (see `docs/en/19_v1_declaration.md`)
-- If you maintain a **separate full ACP checkout**, its `project/scripts/prepare_public_bundle.sh` copies `release/distribution_bundle/` to a publish directory (that script is not shipped in this repository)
+- If you maintain a **separate full ACP checkout**, its `acp/scripts/prepare_public_bundle.sh` copies `release/distribution_bundle/` to a publish directory (that script is not shipped in this repository)
 
 ## Conformance Adapter Quickstart
 - `./scripts/install_conformance_deps.sh` (installs Python deps into a versioned `.tmp/conformance-deps-pyXY` directory)

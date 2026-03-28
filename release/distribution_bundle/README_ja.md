@@ -4,6 +4,9 @@ ACP は、委任された AI 作業に対するアカウンタビリティ層で
 
 ACP は実行フレームワークでも、トランスポートプロトコルでも、決済レールでもありません。
 
+Read-only: このディレクトリは固定済みの配布成果物です。
+編集は `docs/`、`assets/`、`examples/`、`schemas/`、`scripts/` 側で行い、その後にバンドルを再生成してください。
+
 ## まずここから（非エンジニア/エンジニア共通）
 
 - **1枚ベースライン（適用範囲 / Core-15 / 分離原則）**: `docs/ja/00_package_baseline.md`
@@ -61,7 +64,7 @@ ACP は MCP、A2A、ワークフローエンジン、決済システムを置き
 - `docs/en/13_objection_memo.md`
 - `./scripts/public_release_check.sh` は公開メッセージのガードレールを検証します（**ripgrep** `rg` が必要。macOS: `brew install ripgrep`）
 - `./scripts/verify_v1_bundle.sh` は依存導入と v1 全ゲートを実行し、`conformance/out/` の監査用証跡を更新します（`docs/ja/19_v1_declaration.md` 参照）
-- **別途フル ACP チェックアウト**を持つ場合のみ、そのツリーの `project/scripts/prepare_public_bundle.sh` が `release/distribution_bundle/` を配布用ディレクトリへコピーします（このリポジトリには同梱されません）
+- **別途フル ACP チェックアウト**を持つ場合のみ、そのツリーの `acp/scripts/prepare_public_bundle.sh` が `release/distribution_bundle/` を配布用ディレクトリへコピーします（このリポジトリには同梱されません）
 
 ## Conformance Adapter クイックスタート
 - `./scripts/install_conformance_deps.sh`（Python 依存を versioned な `.tmp/conformance-deps-pyXY` ディレクトリに導入します）

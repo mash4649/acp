@@ -2,10 +2,22 @@
 
 This directory provides the root index for the public ACP documentation set.
 
+## Reading layers
+
+- `docs/` = authoritative documentation
+- `assets/` = editable public-facing materials
+- `release/` = frozen distribution artifacts
+
+## Related materials
+
+- [Public assets index](../assets/README.md)
+- [Release bundle README](../release/distribution_bundle/README.md)
+
 ## English
 - [Real-world impact](./en/15_real_world_impact.md)
 - [v1 release execution plan](./en/16_v1_release_execution_plan.md)
 - [Roadmap](./en/20_post_v1_roadmap.md)
+- [Repository structure assessment](./en/repo_structure_assessment.md)
 - [5-minute quickstart](./en/21_quickstart_5min.md)
 - [Harness implementation guide](./en/22_harness_implementation_guide.md)
 - [Schema versioning policy](./en/23_schema_versioning_policy.md)
@@ -29,6 +41,7 @@ This directory provides the root index for the public ACP documentation set.
 - [実務インパクト整理](./ja/15_実務インパクト整理.md)
 - [v1 リリース実行計画](./ja/16_v1リリース実行計画.md)
 - [ロードマップ](./ja/20_post-v1ロードマップ.md)
+- [リポジトリ構成診断](./ja/リポジトリ構成診断.md)
 - [5分クイックスタート](./ja/21_5分クイックスタート.md)
 - [ハーネス実装ガイド](./ja/22_ハーネス実装ガイド.md)
 - [スキーマ版管理ポリシー](./ja/23_スキーマ版管理ポリシー.md)
