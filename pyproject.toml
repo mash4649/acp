@@ -16,5 +16,5 @@ dependencies = []
 [project.optional-dependencies]
 conformance = [
   "jsonschema==4.23.0",
-  "PyYAML==6.0.2",
+  "PyYAML==6.0.3",
 ]
