@@ -174,6 +174,7 @@ ls conformance/out
 | 英語ドキュメント索引 | `docs/en/README.md` |
 | 日本語ドキュメント索引 | `docs/ja/README.md` |
 | 統合索引 | `docs/README.md` |
+| 初見向けリポジトリ全体図 | `docs/ja/リポジトリ全体図.md` |
 | 公開素材索引 | `assets/README.md` |
 | 配布範囲ガイド | `DISTRIBUTION_SCOPE.md` |
 | コントリビューション | `CONTRIBUTING.md` |

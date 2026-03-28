@@ -174,6 +174,7 @@ ls conformance/out
 | English docs index | `docs/en/README.md` |
 | Japanese docs index | `docs/ja/README.md` |
 | Combined docs index | `docs/README.md` |
+| Repository map for first-time contributors | `docs/en/repository_map.md` |
 | Public assets index | `assets/README.md` |
 | Distribution scope | `DISTRIBUTION_SCOPE.md` |
 | Contribution guide | `CONTRIBUTING.md` |

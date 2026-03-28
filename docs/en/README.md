@@ -16,6 +16,7 @@
 - [v1 release execution plan](./16_v1_release_execution_plan.md)
 - [Post-v1 roadmap](./20_post_v1_roadmap.md)
 - [Repository structure assessment](./repo_structure_assessment.md)
+- [Repository map for first-time contributors](./repository_map.md)
 - [5-minute quickstart](./21_quickstart_5min.md)
 - [Harness implementation guide](./22_harness_implementation_guide.md)
 - [Schema versioning policy](./23_schema_versioning_policy.md)
