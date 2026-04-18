@@ -22,12 +22,12 @@ jobs:
       TAG_NAME: ${{ github.event_name == 'release' && github.event.release.tag_name || github.event.inputs.tag }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Verify signed annotated tag
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           INPUT_TAG: ${{ env.TAG_NAME }}
         with:
@@ -71,7 +71,7 @@ jobs:
           sha256sum "$archive" > "$archive.sha256"
 
       - name: Install cosign
-        uses: sigstore/cosign-installer@v3.7.0
+        uses: sigstore/cosign-installer@v4.1.1
 
       - name: Sign checksum with cosign keyless
         run: |
@@ -92,7 +92,7 @@ jobs:
             "$archive.sha256"
 
       - name: Upload signed artifacts to release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ env.TAG_NAME }}
           files: |
